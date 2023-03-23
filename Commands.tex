@@ -1,0 +1,344 @@
+
+\usetikzlibrary{shapes.geometric,calc, decorations.pathmorphing, through,decorations.text,decorations.markings,intersections, arrows.meta, bending,positioning,lindenmayersystems, math}
+%%%%%%%%%%%%%%%%%%%%%%%%%%   LEVEL
+\newcommand{\LevelZero}{ %Level: k=1
+\draw (1)to(2);}
+\newcommand{\LevelOne}{ %Level: k=1
+\draw (1)to(2)to(3);}
+\newcommand{\LevelTwo}{ %Level: k=1
+\draw  (1)to(2) (3)to(4);}
+\newcommand{\LevelThree}{ %Level: k=1
+\draw (1)to(2)to(3)to(4);}
+\newcommand{\LevelFour}{ %Level: k=1
+\draw (1)to(2) (4)to(5);}
+\newcommand{\LevelFive}{ %Level: k=1
+\draw (1)to(2)to(3) (4)to(5);}
+\newcommand{\LevelSix}{ %Level: k=1
+\draw (1)to(2) (3)to(4)to(5);}
+\newcommand{\LevelSeven}{ %Level: k=1
+\draw (1)to(2)to(3)to(4)to(5);}
+\newcommand{\LevelEight}{ %Level: k=1
+\draw (1)to(2) (5)to(6);}
+\newcommand{\LevelNine}{ %Level: k=1
+\draw (1)to(2)to(3) (5)to(6);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   School, in original all minus 1
+\newcommand{\Abjuration}{ %Level: k=2
+\draw (1)to(3);}
+\newcommand{\Conjuration}{ %Level: k=2
+\draw (1)to(3) (2)to(4);}
+\newcommand{\Divination}{ %Level: k=2
+\draw  (1)to(3) (3)to(5);}
+\newcommand{\Enchantment}{ %Level: k=2
+\draw  (1)to(3) (3)to(5) (2)to(4);}
+\newcommand{\Evocation}{ %Level: k=2
+\draw (1)to(3) (4)to(6);}
+\newcommand{\Illusion}{ %Level: k=2
+\draw (1)to(3) (2)to(4) (4)to(6);}
+\newcommand{\Necromancy}{ %Level: k=2
+\draw  (1)to(3) (3)to(5) (4)to(6);}
+\newcommand{\Transmutation}{ %Level: k=2
+\draw  (1)to(3) (3)to(5) (2)to(4) (4)to(6);}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   School, in original all minus 2
+\newcommand{\Acid}{ %Level: k=3
+\draw (1)to(4);}
+\newcommand{\Bludgeoning}{ %Level: k=3
+\draw (1)to(4) (2)to(5);}
+\newcommand{\Cold}{ %Level: k=3
+\draw  (1)to(4) (3)to(6);}
+\newcommand{\Damage}{ %Level: k=3
+\draw (1)to(4) (2)to(5) (3)to(6);}
+\newcommand{\Extra}{ %Level: k=3
+\draw (1)to(4) (4)to(7);}
+\newcommand{\Fire}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (2)to(5);}
+\newcommand{\Force}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (3)to(6);}
+\newcommand{\Lightning}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (2)to(5) (3)to(6);}
+\newcommand{\Necrotic}{ %Level: k=3
+\draw (1)to(4) (5)to(8);}
+\newcommand{\Nonmagical}{ %Level: k=3
+\draw (1)to(4) (2)to(5) (5)to(8);}
+\newcommand{\Piercing}{ %Level: k=3
+\draw  (1)to(4) (5)to(8) (3)to(6);}
+\newcommand{\Poison}{ %Level: k=3
+\draw (1)to(4) (2)to(5) (5)to(8) (3)to(6);}
+\newcommand{\Psychic}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (5)to(8);}
+\newcommand{\Radiant}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (2)to(5) (5)to(8);}
+\newcommand{\Slashing}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (3)to(6) (5)to(8);}
+\newcommand{\Thunder}{ %Level: k=3
+\draw (1)to(4) (4)to(7) (2)to(5) (5)to(8) (3)to(6);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Areas, in original all minus 3
+\newcommand{\Circle}{ %Level: k=4
+\draw (1)to(5)(2)to(6)(3)to(7)(4)to(8);}
+\newcommand{\ConeSphere}{ %Level: k=4
+\draw (1)to(5) (2)to(6)(4)to(8);}
+\newcommand{\Cone}{ %Level: k=4
+\draw  (1)to(5) (4)to(8);}
+\newcommand{\Cube}{ %Level: k=4
+\draw (1)to(5);}
+\newcommand{\Cylinder}{ %Level: k=4
+\draw (1)to(5) (2)to(6) (6)to(10);}
+\newcommand{\Line}{ %Level: k=4
+\draw (1)to(5) (2)to(6);}
+\newcommand{\MultipleTargetsSphere}{ %Level: k=4
+\draw (1)to(5) (2)to(6) (3)to(7);}
+\newcommand{\MultipleTargets}{ %Level: k=4
+\draw (1)to(5) (3)to(7);}
+\newcommand{\None}{ %Level: k=4
+\draw (1)to(5) (3)to(7) (6)to(10);}
+\newcommand{\SingleTargetCone}{ %Level: k=4
+\draw (1)to(5) (2)to(6) (4)to(8) (5)to(9);}
+\newcommand{\SingleTargetCube}{ %Level: k=4
+\draw  (1)to(5) (2)to(6) (3)to(7) (5)to(9);}
+\newcommand{\SingleTargetMultipleTargets}{ %Level: k=4
+\draw (1)to(5) (4)to(8) (5)to(9);}
+\newcommand{\SingleTargetSphere}{ %Level: k=4
+\draw (1)to(5) (3)to(7) (4)to(8) (5)to(9);}
+\newcommand{\SingleTargetWall}{ %Level: k=4
+\draw (1)to(5) (2)to(6) (3)to(7) (4)to(8) (5)to(9);}
+\newcommand{\SingleTarget}{ %Level: k=4
+\draw (1)to(5)  (3)to(7) (5)to(9);}
+\newcommand{\SphereCylinder}{ %Level: k=4
+\draw (1)to(5) (2)to(6) (5)to(9);}
+\newcommand{\Sphere}{ %Level: k=4
+\draw (1)to(5) (5)to(9);}
+\newcommand{\Square}{ %Level: k=4
+\draw (1)to(5) (3)to(7) (4)to(8);}
+\newcommand{\Wall}{ %Level: k=4
+\draw (1)to(5)(6)to(10);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Range, in original all minus 4
+\newcommand{\TenFeetRadius}{ %Level: k=5
+\draw (1)to(6);}
+\newcommand{\OnehundredFeetLine}{ %Level: k=5
+\draw (1)to(6)(2)to(7);}
+\newcommand{\FifteenFeetCone}{ %Level: k=5
+\draw  (1)to(6)(3)to(8);}
+\newcommand{\FifteenFeetCube}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8);}
+\newcommand{\FifteenFeetRadius}{ %Level: k=5
+\draw (1)to(6)(4)to(9);}
+\newcommand{\ThirtyFeetCone}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(4)to(9);}
+\newcommand{\ThirtyFeetLine}{ %Level: k=5
+\draw (1)to(6)(3)to(8)(4)to(9);}
+\newcommand{\ThirtyFeetRadius}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8)(4)to(9);}
+\newcommand{\FiveFeetRadius}{ %Level: k=5
+\draw (1)to(6)(5)to(10);}
+\newcommand{\SixtyFeetCone}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(5)to(10);}
+\newcommand{\SixtyFeetLine}{ %Level: k=5
+\draw  (1)to(6)(3)to(8)(5)to(10);}
+\newcommand{\PointOneMile}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8)(5)to(10);}
+\newcommand{\PointTenFeet}{ %Level: k=5
+\draw(1)to(6)(4)to(9)(5)to(10);}
+\newcommand{\PointThousandFeet}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(4)to(9)(5)to(10));}
+\newcommand{\PointOnehundredtwentyFeet}{ %Level: k=5
+\draw (1)to(6)(3)to(8)(4)to(9)(5)to(10);}
+\newcommand{\PointOnehundredfiftyFeet}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8)(4)to(9)(5)to(10);}
+\newcommand{\PointThirtyFeet}{ %Level: k=5
+\draw (1)to(6)(6)to(11);}
+\newcommand{\PointThreehundredFeet}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(6)to(11);}
+\newcommand{\PointFiveFeet}{ %Level: k=5
+\draw (1)to(6)(3)to(8)(6)to(11);}
+\newcommand{\PointFivehundredFeet}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8)(6)to(11);}
+\newcommand{\PointSixtyFeet}{ %Level: k=5
+\draw (1)to(6)(4)to(9)(6)to(11);}
+\newcommand{\PointNinetyFeet}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(4)to(9)(6)to(11);}
+\newcommand{\Self}{ %Level: k=5
+\draw (1)to(6)(3)to(8)(4)to(9)(6)to(11);}
+\newcommand{\Sight}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(3)to(8)(4)to(9)(6)to(11);}
+\newcommand{\Special}{ %Level: k=5
+\draw (1)to(6)(5)to(10)(6)to(11);}
+\newcommand{\Touch}{ %Level: k=5
+\draw (1)to(6)(2)to(7)(5)to(10)(6)to(11);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   The following commands are shifted to match the Spell writing guide
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   LEVEL
+\newcommand{\LevelZeroSWG}{ %Level: k=1
+\draw (1)to(2);}
+\newcommand{\LevelOneSWG}{ %Level: k=1
+\draw (1)to(2)to(3);}
+\newcommand{\LevelTwoSWG}{ %Level: k=1
+\draw  (1)to(2) (3)to(4);}
+\newcommand{\LevelThreeSWG}{ %Level: k=1
+\draw (1)to(2)to(3)to(4);}
+\newcommand{\LevelFourSWG}{ %Level: k=1
+\draw (1)to(2) (4)to(5);}
+\newcommand{\LevelFiveSWG}{ %Level: k=1
+\draw (1)to(2)to(3) (4)to(5);}
+\newcommand{\LevelSixSWG}{ %Level: k=1
+\draw (1)to(2) (3)to(4)to(5);}
+\newcommand{\LevelSevenSWG}{ %Level: k=1
+\draw (1)to(2)to(3)to(4)to(5);}
+\newcommand{\LevelEightSWG}{ %Level: k=1
+\draw (1)to(2) (5)to(6);}
+\newcommand{\LevelNineSWG}{ %Level: k=1
+\draw (1)to(2)to(3) (5)to(6);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   School, 
+\newcommand{\AbjurationSWG}{ %Level: k=2
+\draw (11)to(2);}
+\newcommand{\ConjurationSWG}{ %Level: k=2
+\draw (11)to(2) (1)to(3);}
+\newcommand{\DivinationSWG}{ %Level: k=2
+\draw  (11)to(2) (2)to(4);}
+\newcommand{\EnchantmentSWG}{ %Level: k=2
+\draw  (11)to(2) (2)to(4) (1)to(3);}
+\newcommand{\EvocationSWG}{ %Level: k=2
+\draw (11)to(2) (3)to(5);}
+\newcommand{\IllusionSWG}{ %Level: k=2
+\draw (11)to(2) (1)to(3) (3)to(5);}
+\newcommand{\NecromancySWG}{ %Level: k=2
+\draw  (11)to(2) (2)to(4) (3)to(5);}
+\newcommand{\TransmutationSWG}{ %Level: k=2
+\draw  (11)to(2) (2)to(4) (1)to(3) (3)to(5);}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   School
+\newcommand{\AcidSWG}{ %Level: k=3
+\draw (10)to(2);}
+\newcommand{\BludgeoningSWG}{ %Level: k=3
+\draw (10)to(2) (11)to(3);}
+\newcommand{\ColdSWG}{ %Level: k=3
+\draw  (10)to(2) (1)to(4);}
+\newcommand{\DamageSWG}{ %Level: k=3
+\draw (10)to(2) (11)to(3) (1)to(4);}
+\newcommand{\ExtraSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5);}
+\newcommand{\FireSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (11)to(3);}
+\newcommand{\ForceSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (1)to(4);}
+\newcommand{\LightningSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (11)to(3) (1)to(4);}
+\newcommand{\NecroticSWG}{ %Level: k=3
+\draw (10)to(2) (3)to(6);}
+\newcommand{\NonmagicalSWG}{ %Level: k=3
+\draw (10)to(2) (11)to(3) (3)to(6);}
+\newcommand{\PiercingSWG}{ %Level: k=3
+\draw  (10)to(2) (3)to(6) (1)to(4);}
+\newcommand{\PoisonSWG}{ %Level: k=3
+\draw (10)to(2) (11)to(3) (3)to(6) (1)to(4);}
+\newcommand{\PsychicSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (3)to(6);}
+\newcommand{\RadiantSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (11)to(3) (3)to(6);}
+\newcommand{\SlashingSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (1)to(4) (3)to(6);}
+\newcommand{\ThunderSWG}{ %Level: k=3
+\draw (10)to(2) (2)to(5) (11)to(3) (3)to(6) (1)to(4);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Areas, (-3)
+\newcommand{\CircleSWG}{ %Level: k=4
+\draw (9)to(2)(10)to(3)(11)to(4)(1)to(5);}
+\newcommand{\ConeSphereSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3)(1)to(5);}
+\newcommand{\ConeSWG}{ %Level: k=4
+\draw  (9)to(2) (1)to(5);}
+\newcommand{\CubeSWG}{ %Level: k=4
+\draw (9)to(2);}
+\newcommand{\CylinderSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3) (3)to(7);}
+\newcommand{\LineSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3);}
+\newcommand{\MultipleTargetsSphereSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3) (11)to(4);}
+\newcommand{\MultipleTargetsSWG}{ %Level: k=4
+\draw (9)to(2) (11)to(4);}
+\newcommand{\NoneSWG}{ %Level: k=4
+\draw (9)to(2) (11)to(4) (3)to(7);}
+\newcommand{\SingleTargetConeSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3) (1)to(5) (2)to(6);}
+\newcommand{\SingleTargetCubeSWG}{ %Level: k=4
+\draw  (9)to(2) (10)to(3) (11)to(4) (2)to(6);}
+\newcommand{\SingleTargetMultipleTargetsSWG}{ %Level: k=4
+\draw (9)to(2) (1)to(5) (2)to(6);}
+\newcommand{\SingleTargetSphereSWG}{ %Level: k=4
+\draw (9)to(2) (11)to(4) (1)to(5) (2)to(6);}
+\newcommand{\SingleTargetWallSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3) (11)to(4) (1)to(5) (2)to(6);}
+\newcommand{\SingleTargetSWG}{ %Level: k=4
+\draw (9)to(2)  (11)to(4) (2)to(6);}
+\newcommand{\SphereCylinderSWG}{ %Level: k=4
+\draw (9)to(2) (10)to(3) (2)to(6);}
+\newcommand{\SphereSWG}{ %Level: k=4
+\draw (9)to(2) (2)to(6);}
+\newcommand{\SquareSWG}{ %Level: k=4
+\draw (9)to(2) (11)to(4) (1)to(5);}
+\newcommand{\WallSWG}{ %Level: k=4
+\draw (9)to(2)(3)to(7);}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%   Range, in original all minus 4
+\newcommand{\TenFeetRadiusSWG}{ %Level: k=5
+\draw (8)to(2);}
+\newcommand{\OnehundredFeetLineSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3);}
+\newcommand{\FifteenFeetConeSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4);}
+\newcommand{\FifteenFeetCubeSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4);}
+\newcommand{\FifteenFeetRadiusSWG}{ %Level: k=5
+\draw (8)to(2)(11)to(5);}
+\newcommand{\ThirtyFeetConeSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(11)to(5);}
+\newcommand{\ThirtyFeetLineSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(11)to(5);}
+\newcommand{\ThirtyFeetRadiusSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4)(11)to(5);}
+\newcommand{\FiveFeetRadiusSWG}{ %Level: k=5
+\draw (8)to(2)(1)to(6);}
+\newcommand{\SixtyFeetConeSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(1)to(6);}
+\newcommand{\SixtyFeetLineSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(1)to(6);}
+\newcommand{\PointOneMileSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4)(1)to(6);}
+\newcommand{\PointTenFeetSWG}{ %Level: k=5
+\draw (8)to(2)(11)to(5)(1)to(6);}
+\newcommand{\PointThousandFeetSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(11)to(5)(1)to(6));}
+\newcommand{\PointOnehundredtwentyFeetSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(11)to(5)(1)to(6);}
+\newcommand{\PointOnehundredfiftyFeetSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4)(11)to(5)(1)to(6);}
+\newcommand{\PointThirtyFeetSWG}{ %Level: k=5
+\draw (8)to(2)(2)to(7);}
+\newcommand{\PointThreehundredFeetSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(2)to(7);}
+\newcommand{\PointFiveFeetSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(2)to(7);}
+\newcommand{\PointFivehundredFeetSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4)(2)to(7);}
+\newcommand{\PointSixtyFeetSWG}{ %Level: k=5
+\draw (8)to(2)(11)to(5)(2)to(7);}
+\newcommand{\PointNinetyFeetSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(11)to(5)(2)to(7);}
+\newcommand{\SelfSWG}{ %Level: k=5
+\draw (8)to(2)(10)to(4)(11)to(5)(2)to(7);}
+\newcommand{\SightSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(10)to(4)(11)to(5)(2)to(7);}
+\newcommand{\SpecialSWG}{ %Level: k=5
+\draw (8)to(2)(1)to(6)(2)to(7);}
+\newcommand{\TouchSWG}{ %Level: k=5
+\draw (8)to(2)(9)to(3)(1)to(6)(2)to(7);}

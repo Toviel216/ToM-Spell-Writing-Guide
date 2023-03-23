@@ -1,0 +1,23 @@
+
+% current coordinates follow x^3. You can safely remove the $...$ parts, the pic just gets smaller
+
+%\coordinate (1) at ($10*(-1,-1)$);
+%\coordinate (2) at ($10*(-0.8,-0.512)$);
+%\coordinate (3) at ($10*(-0.6,-0.216)$);
+%\coordinate (4) at ($10*(-0.4,-0.064)$);
+%\coordinate (5) at ($10*(-0.2,-0.008)$);
+%\coordinate (6) at ($10*(0,0)$);
+%\coordinate (7) at ($10*(0.2,0.008)$);
+%\coordinate (8) at ($10*(0.4,0.064)$);
+%\coordinate (9) at ($10*(0.6,0.216)$);
+%\coordinate (10) at ($10*(0.8,0.512)$);
+%\coordinate (11) at ($10*(1,1)$);
+
+\node[regular polygon, regular polygon sides=11, minimum height=10cm](a) at (0,0){};
+\foreach \x in {1,...,11}
+\draw[opacity=0] (0,0)--(a.corner \x) coordinate (\x);
+
+
+%vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv  remove % to add small dots where the edges are
+%\foreach \x in {1,...,11}
+%\fill (\x) circle (2pt);
